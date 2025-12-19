@@ -13,7 +13,7 @@ export default defineConfig(({ mode }) => ({
 
   // 🔑 IMPORTANT: change this to your GitHub repo name
   // Example repo: portfolio-risk-intelligence
-  base: "/portfolio-risk-intelligence/",
+  base: "/pfi-ui/",
 
   publicDir: "./static",
 
