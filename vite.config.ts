@@ -11,8 +11,7 @@ export default defineConfig(({ mode }) => ({
       : []),
   ],
 
-  // 🔑 IMPORTANT: change this to your GitHub repo name
-  // Example repo: portfolio-risk-intelligence
+  // GitHub Pages base path
   base: "/pfi-ui/",
 
   publicDir: "./static",
