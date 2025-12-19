@@ -3,7 +3,7 @@ name: Deploy PFI UI to GitHub Pages
 on:
   push:
     branches:
-      - main   # change to master if your repo uses master
+      - main
 
 permissions:
   contents: read
@@ -26,12 +26,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: "pnpm"
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v3
-        with:
-          version: 9
+      - name: Enable pnpm via Corepack
+        run: |
+          corepack enable
+          corepack prepare pnpm@9 --activate
 
       - name: Install dependencies
         run: pnpm install
